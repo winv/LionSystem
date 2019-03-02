@@ -7,7 +7,7 @@ import 'iview/dist/styles/iview.css'
 Vue.use(iView)
 iView.LoadingBar.config({
   color: '#2c3e50',
-  height: 5
+  height: 1
 })
 /* eslint-disable no-new */
 new Vue({

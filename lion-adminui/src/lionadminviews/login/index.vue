@@ -1,5 +1,5 @@
 <template>
-  <div>这是登录测试页面</div>
+  <div>这是登录测试页面 github开源</div>
 </template>
 
 <script>
