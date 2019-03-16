@@ -436,4 +436,7 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 
+#ignore lock.json
+package-lock.json
+
 # End of https://www.gitignore.io/api/vue,intellij,visualstudio

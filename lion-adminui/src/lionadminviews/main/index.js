@@ -1,2 +1,2 @@
-import Index from './index.vue'
-export default Index
+import Main from './main.vue'
+export default Main
