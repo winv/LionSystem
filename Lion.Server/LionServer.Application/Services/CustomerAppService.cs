@@ -1,6 +1,4 @@
-﻿
-
-using AutoMapper;
+﻿using AutoMapper;
 using AutoMapper.QueryableExtensions;
 using LionServer.Application.EventSourcedNormalizers;
 using LionServer.Application.Interfaces;

@@ -3,7 +3,7 @@ using System;
 
 namespace LionServer.Infra.Data.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class Init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -20,7 +20,6 @@ namespace LionServer.Infra.Data.Migrations
                 {
                     table.PrimaryKey("PK_Customers", x => x.Id);
                 });
-
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

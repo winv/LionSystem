@@ -1,4 +1,6 @@
-﻿using LionServer.Domain.CommandHandlers;
+﻿using LionServer.Application.Interfaces;
+using LionServer.Application.Services;
+using LionServer.Domain.CommandHandlers;
 using LionServer.Domain.Commands;
 using LionServer.Domain.Core.Bus;
 using LionServer.Domain.Core.Events;
@@ -13,13 +15,8 @@ using LionServer.Infra.Data.Repository;
 using LionServer.Infra.Data.Repository.EventSourcing;
 using LionServer.Infra.Data.UoW;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LionServer.Infra.CrossCutting.IoC
 {
@@ -28,7 +25,7 @@ namespace LionServer.Infra.CrossCutting.IoC
         public static void RegisterServices(IServiceCollection services)
         {
             // ASP.NET HttpContext dependency
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             // Domain Bus (Mediator)
             services.AddScoped<IMediatorHandler, InMemoryBus>();
@@ -37,7 +34,7 @@ namespace LionServer.Infra.CrossCutting.IoC
             //services.AddSingleton<IAuthorizationHandler, ClaimsRequirementHandler>();
 
             // Application
-            //services.AddScoped<ICustomerAppService, CustomerAppService>();
+            services.AddScoped<ICustomerAppService, CustomerAppService>();
 
             // Domain - Events
             services.AddScoped<INotificationHandler<DomainNotification>, DomainNotificationHandler>();
